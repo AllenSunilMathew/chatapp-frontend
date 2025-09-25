@@ -1,0 +1,48 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#loginBackground{
+  background: url('https://wallpapercave.com/wp/wp9764031.jpg');
+}
+
+.chats_list {
+    height: 75vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.chat_sender {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row
+}
+
+.chat_sender img,
+.chat_receiver img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.chat_sender p {
+    padding: 10px;
+    background-color: #54781a;
+    border-radius: 10px;
+    max-width: 60%,
+}
+
+.chat_receiver {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row
+}
+
+
+.chat_receiver p {
+    padding: 10px;
+    background-color: #aff6be;
+    border-radius: 10px;
+    max-width: 60%,
+}
