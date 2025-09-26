@@ -28,7 +28,7 @@ const currentUser = useSelector(state => state.chatReducer.currentUser);
 
     const connectSocket = (user) => {
         
-    const socketUrl = import.meta.env.VITE_SOCKET_URL || 'https://chat-app-backend-0u7m.onrender.com';
+    const socketUrl = import.meta.env.VITE_SOCKET_URL || 'https://chatapp-server-2pv1.onrender.com';
     const newSocket = io(socketUrl);
     
     setSocket(newSocket);
@@ -84,7 +84,7 @@ const currentUser = useSelector(state => state.chatReducer.currentUser);
     return (
         <>
             {switchPage ? (
-                <div className='d-flex align-items-center justify-content-center vh-100 ' style={ {background:'url(./bg.jpeg)' , backgroundRepeat:"no-repeat" , backgroundSize:'cover' }}>
+                <div className='d-flex align-items-center justify-content-center vh-100 ' style={ {background:'url(./bglgn.jpeg)' , backgroundRepeat:"no-repeat" , backgroundSize:'cover' }}>
                     <div className=' shadow p-4' style={{width: '300px', backdropFilter: 'blur(10px)',}}>
                         <h3 className='text-danger text-center mb-3'>Chat Login</h3>
                         <input 
@@ -94,18 +94,18 @@ const currentUser = useSelector(state => state.chatReducer.currentUser);
                             onChange={e => setUserName(e.target.value)}
                             className='form-control mb-3' 
                         />
-                        <button onClick={handleLogin} className='btn btn-danger w-100'>
+                        <button onClick={handleLogin} className='btn btn-success w-100'>
                             Start Chatting
                         </button>
                     </div>
                 </div>
             ) : (
-                <div className='d-flex justify-content-center align-items-center vh-100 ' style={{background:'url("/chat.jpg")'}}>
+                <div className='d-flex justify-content-center align-items-center vh-100 ' style={{background:'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpUsr8IzcxIGXVRT4rUAo71K6xiTT-xomqfA&s"/chat.jpg")'}}>
                     <div className='shadow' style={{height:'600px', width:"400px", backdropFilter: 'blur(10px)',}}>
 
                         <header className='bg-dark text-white p-3 d-flex justify-content-between align-items-center'>
                             <div>
-                                <strong>Chat App</strong>
+                                <strong>Vibe Chat</strong>
                                 <span className='ms-2'>- {currentUser}</span>
                             </div>
                             <button className='btn btn-danger btn-sm' onClick={handleLogout}>
@@ -131,7 +131,7 @@ const currentUser = useSelector(state => state.chatReducer.currentUser);
                                     <div 
                                         className={`p-2 rounded ${
                                             message.user === currentUser 
-                                                ? 'bg-primary text-white' 
+                                                ? 'bg-primary text-black' 
                                                 : 'bg-light border'
                                         }`}
                                         style={{ maxWidth: '70%' }}
@@ -161,7 +161,7 @@ const currentUser = useSelector(state => state.chatReducer.currentUser);
                                 />
                                 <button 
                                     onClick={handleSendMessage} 
-                                    className='btn btn-danger'
+                                    className='btn btn-success'
                                     disabled={!messageInput.trim()}
                                 >
                                     Send
